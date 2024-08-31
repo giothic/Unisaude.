@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" />
+    <title>Login Unisaude.</title>
+  </head>
+  <body>
+    <main class="fundo">
+      <div class="card-login">
+        <div class="logo">
+          <img src="./img/logo.png">
+        </div>
+        <div class="unisaude">
+          <img src="./img/unisaude.png">
+        </div>
+        <div class="usuário">
+          <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Usuário"
+        />
+        </div>
+        <div class="senha">
+          <label for="password"></label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Senha"
+          />
+        </div>
+        <div class="button">
+          <button id="loginButton" class="btn-login" >
+        </div>
+        <div class="desenho">
+          <img src="./img/desenho-final.png">
+        </div>
+      </div>
+    </main>
+    <script>
+
+      const loginButton = document.getElementById("loginButton");
+
+
+      loginButton.addEventListener("click", () => {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+
+        if (username && password) {
+          window.location.href = "home.html";
+        } else {
+          alert("Por favor, preencha todos os campos.");
+        }
+      });
+    </script>
+  </body>
+</html>
